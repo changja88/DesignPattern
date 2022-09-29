@@ -18,6 +18,7 @@ interface Pizza {
     fun bake() {}
     fun box() {}
 }
+
 class CheesePizza() : Pizza {}
 class GreekPizza() : Pizza {}
 class PepperoniPizza() : Pizza {}
@@ -28,3 +29,23 @@ class NYPepperoniPizza() : Pizza {}
 class NYGreekPizza() : Pizza {}
 class NYClamPizza() : Pizza {}
 class NYVeggiePizza() : Pizza {}
+class Amplifier()
+class Tuner()
+class DvdPlayer()
+class Projector()
+class TheaterLights()
+class Screen()
+class PopcornPopper()
+class Engine() {
+    fun start() {}
+}
+
+class Key() {
+    fun turns(): Boolean {
+        return true
+    }
+}
+
+class Doors() {
+    fun lock() {}
+}
