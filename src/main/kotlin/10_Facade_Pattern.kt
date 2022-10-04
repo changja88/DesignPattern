@@ -55,17 +55,17 @@ class HomeTheaterFacade(
 
 // ### 호출 가능한 객체의 메소드 사례 ###
 // 원칙을 따리지 않는 경우
-fun getTemp() {
+//fun getTemp() {
     // station으로부터 thermometer라는 객체를 받은 다음, 그 객체의 메소드를 직접 호출 한다
-    val thermometer: Thermometer = station.getThermometer()
-    return thermometer.getTemperature()
-}
+//    val thermometer: Thermometer = station.getThermometer()
+//    return thermometer.getTemperature()
+//}
 
 // 원칙을 따르는 경우
-fun getTemp() {
+//fun getTemp() {
     // 최소 지식 원칙을 적용하여 station클래스에 thermometer에 요청 해주는 메소드를 추가했다
-    return station.getTemperature()
-}
+//    return station.getTemperature()
+//}
 
 //상세 예시
 class Car(
