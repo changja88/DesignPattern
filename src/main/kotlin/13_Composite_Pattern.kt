@@ -4,6 +4,7 @@
 ### 정의 ###
 - 객체들을 트리 구조로 구성하여 부분과 전체를 나타내는 계층구조로 만들수 있다.
   이 패턴을 이용하면 클라이언트에서 개별 객체와 다른 객체들로 구성된 복합객체를 똑같은 방법으로 다룰 수 있다
+- Composite : 합성물
 
 ### 목적 ###
 - 복합 객체와 개별 객체에 대해 똑같은 작업을 적용할 수 있다.
@@ -11,6 +12,10 @@
 
 ### 패턴에 사용된 기술 포인트 ###
 - 부분-전체 계층 구조를 생성한다, 부분들들이 모여있지만, 모든 것을 하나로 묶어서 전체로 다룰수 있는 구조
+    - 부분들이 모여있지만 전체로 다룬다 -> Composite와 leaf를 하나로 다룬다
+    - composite 와 leaf 모두 component 타입 이기 때문에 하나로 다룰 수 있다
+    - component는 compsite와 leaf모두 상속 받기 때문에 compsite, leaf가 필요한 모든 행동에 대한 정의가 있어야 한다
+
 - 아래와 같은 구조를 만든다
   Client(Waitress) -> Component(MenuComponent) <- Composite(Menu, 복합객체)
                                                <- Leaf(MenuItem, 개별객체)
@@ -19,6 +24,8 @@
                   Leaf와 과련된 기능도 구현해야 한다.
     - Leaf : 자식이 없다
              원소에 대한 행동을 정의한다 (Composite에서 지원하는 기능을 구현하면 된다)
+
+
 
 - 다른 패턴과의 차이점
     - 스테이트 패턴 : 어떤 상태가 바뀜에 따라 객체의 행동을 바꿀 수 있습니다
@@ -63,15 +70,6 @@ abstract class MenuComponent {
 }
 
 
-class MenuItem1(
-    override var name: String, override val description: String, val vegetarian: Boolean, val price: Double
-) : MenuComponent() {
-
-    override fun print() {
-        println("" + name + description + price)
-    }
-}
-
 class Menu(
     override val name: String, override val description: String
 ) : MenuComponent() {
@@ -93,6 +91,17 @@ class Menu(
         }
     }
 }
+
+
+class MenuItem1(
+    override var name: String, override val description: String, val vegetarian: Boolean, val price: Double
+) : MenuComponent() {
+
+    override fun print() {
+        println("" + name + description + price)
+    }
+}
+
 
 class Waitress(val allMenues: MenuComponent) {
     fun printMenu() {
