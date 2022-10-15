@@ -68,7 +68,7 @@ class FlyWithWings : FlyBehavior {
     }
 }
 
-class FlayNoWay : FlyBehavior {
+class FlyNoWay : FlyBehavior {
     override fun fly() {
         println("저는 못 날아요!")
     }
@@ -129,7 +129,7 @@ fun main() {
     mallard.performQuack()
     mallard.performFly()
 
-    mallard.flyBehavior = FlayNoWay() //-> 동적으로 변경도 가능하다 (Strategy Pattern)
+    mallard.flyBehavior = FlyNoWay() //-> 동적으로 변경도 가능하다 (Strategy Pattern)
     mallard.performFly()
 }
 

@@ -120,6 +120,7 @@ abstract class CaffeinBeverageWithHook {
         return true
     }
 }
+
 // 후크메소드 활용 예시
 class CoffeeWithHook : CaffeinBeverageWithHook() {
     override fun brew() {
@@ -134,7 +135,7 @@ class CoffeeWithHook : CaffeinBeverageWithHook() {
         else return false
     }
 
-    fun getUserInput():String{
+    fun getUserInput(): String {
         return "Y"
     }
 }
