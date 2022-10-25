@@ -7,16 +7,16 @@ classDiagram
 A_Duck --|> C_MallardDuck: 구현 
 A_Duck --|> C_Rubberduck : 구현
 class A_Duck{
-+display()
-+swim()
+display()
+swim()
 }
 class C_MallardDuck{
-+display()
-+swim()
+display()
+swim()
 }
 class C_Rubberduck{
-+display()
-+swim()
+display()
+swim()
 }
 ```
 
@@ -33,19 +33,19 @@ classDiagram
 A_Dcuk <|-- C_MallardDuck: 구현 
 A_Dcuk <|-- C_Rubberduck : 구현
 class A_Dcuk{
-    +fly()
-    +display()
-    +swim()
+    fly()
+    display()
+    swim()
 }
 class C_MallardDuck{
-    +fly()
-    +display()
-    +swim()
+    fly()
+    display()
+    swim()
 }
 class C_Rubberduck{
-    +fly()
-    +display()
-    +swim()
+    fly()
+    display()
+    swim()
 }
 ```
 
@@ -67,22 +67,22 @@ A_Duck <|-- C_MallardDuck: 구현
 A_Duck <|-- C_Rubberduck : 구현
 C_MallardDuck --<| Flyable : 구현
 class Flyable{
-+fly()
+fly()
 }
 class A_Duck{
-    +fly()
-    +display()
-    +swim()
+    fly()
+    display()
+    swim()
 }
 class C_MallardDuck{
-    +fly()
-    +display()
-    +swim()
+    fly()
+    display()
+    swim()
 }
 class C_Rubberduck{
-    +fly()
-    +display()
-    +swim()
+    fly()
+    display()
+    swim()
 }
 ```
 
@@ -140,33 +140,33 @@ Strategy Pattern을 도입한다
 ```mermaid
 classDiagram
 class I_FlyBehavior{
-    +fly()
+    fly()
 }
 class C_FlyNoWay{
-    +fly()
+    fly()
 }
 class C_FlyWithWings{
-    +fly()
+    fly()
 }
 class A_Duck{
-    +flyBehavior
-    +performFly()
-    +setFlyBehavior()
+    flyBehavior
+    performFly()
+    setFlyBehavior()
 }
 class C_MallardDuck{
-    +flyBehavior
-    +performFly()
-    +display()
-    +swim()
-        +setFlyBehavior()
+    flyBehavior
+    performFly()
+    display()
+    swim()
+    setFlyBehavior()
 
 }
 class C_Rubberduck{
-    +flyBehavior
-    +performFly()
-    +display()
-    +swim()
-        +setFlyBehavior()
+    flyBehavior
+    performFly()
+    display()
+    swim()
+    setFlyBehavior()
 
 }
 
