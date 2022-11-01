@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Kotlin" type="JetRunConfigurationType" singleton="false">
     <option name="MAIN_CLASS_NAME" value="MainKt" />
-    <module name="DesignPattern" />
+    <module name="Master" />
     <shortenClasspath name="NONE" />
     <method v="2">
       <option name="Make" enabled="true" />
